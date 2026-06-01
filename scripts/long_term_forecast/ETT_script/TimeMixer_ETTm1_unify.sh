@@ -2,7 +2,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 model_name=TimeMixer
 
-seq_len=96
+seq_len=192
 e_layers=2
 down_sampling_layers=3
 down_sampling_window=2
@@ -34,8 +34,8 @@ python -u run.py \
   --learning_rate $learning_rate \
   --down_sampling_layers $down_sampling_layers \
   --down_sampling_method avg \
-  --down_sampling_window $down_sampling_window
-
+  --down_sampling_window $down_sampling_window \
+  --num_workers 0
 
 python -u run.py \
   --task_name long_term_forecast \
@@ -60,8 +60,8 @@ python -u run.py \
   --learning_rate $learning_rate \
   --down_sampling_layers $down_sampling_layers \
   --down_sampling_method avg \
-  --down_sampling_window $down_sampling_window
-
+  --down_sampling_window $down_sampling_window \
+  --num_workers 0
 
 python -u run.py \
   --task_name long_term_forecast \
@@ -86,8 +86,8 @@ python -u run.py \
   --learning_rate $learning_rate \
   --down_sampling_layers $down_sampling_layers \
   --down_sampling_method avg \
-  --down_sampling_window $down_sampling_window
-
+  --down_sampling_window $down_sampling_window \
+  --num_workers 0
 
 python -u run.py \
   --task_name long_term_forecast \
@@ -112,4 +112,5 @@ python -u run.py \
   --learning_rate $learning_rate \
   --down_sampling_layers $down_sampling_layers \
   --down_sampling_method avg \
-  --down_sampling_window $down_sampling_window
+  --down_sampling_window $down_sampling_window \
+  --num_workers 0
